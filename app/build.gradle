@@ -18,6 +18,7 @@ android {
         applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion 16
         targetSdkVersion 26
+        flavorDimensions "default"
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -31,6 +32,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        free {
+            applicationId 'com.udacity.gradle.builditbigger.free'
+        }
+        paid {
+            applicationId 'com.udacity.gradle.builditbigger.paid'
+        }
+    }
+
 }
 
 dependencies {
